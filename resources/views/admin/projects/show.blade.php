@@ -30,7 +30,7 @@
                             @foreach ($project->technologies as $technology)
                                 <li class="col-3"><a class="text-white"
                                         href="{{ route('admin.technologies.show', $technology->slug) }}"><i
-                                            class="fa-brands fs-1 fa-{{ $technology->name }}"></i></a>
+                                            class="fa-brands {{ $technology->icon }}"></i></a>
                                 </li>
                             @endforeach
                         @else

@@ -38,7 +38,7 @@
                                 value="{{ $technology->id }}"
                                 {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }}>
                             <label class="form-chech-label" for="technology{{ $key }}">
-                                <i style="cursor: pointer" class="fs-1 ms-2 fa-brands fa-{{ $technology->name }}"></i>
+                                <i style="cursor: pointer" class="fs-1 ms-2 {{ $technology->icon }}"></i>
 
                             </label>
                         </div>
