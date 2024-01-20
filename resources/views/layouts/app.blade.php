@@ -25,7 +25,7 @@
 
         <nav class=" navbar navbar-expand-md navbar-light bg-dark text-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex align-items-center" href="{{ url('/admin') }}">
                     <div class="logo_laravel">
                         <div style="width: 70px">
                             <img src="https://avatars.githubusercontent.com/u/115223190?v=4" class="w-100"
