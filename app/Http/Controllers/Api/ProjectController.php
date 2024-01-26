@@ -5,12 +5,17 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\Category;
 
 class ProjectController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $projects = Project::all();
+        if ($request->query('category')) {
+            $projects = Project::where('category_id', $request->query('category'))->get();
+        } else {
+            $projects = Project::all();
+        }
         return response()->json([
             'success' => true,
             'data' => $projects
@@ -25,4 +30,6 @@ class ProjectController extends Controller
             'data' => $project
         ]);
     }
+
+
 }
